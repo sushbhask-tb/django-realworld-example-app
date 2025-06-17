@@ -1,0 +1,22 @@
+databases:
+  - name: conduit
+    plan: free
+    databaseName: conduit
+    user: postgres
+
+services:
+  - type: web
+    plan: free
+    name: conduit
+    runtime: python
+    buildCommand: './build.sh'
+    startCommand: 'python3 -m gunicorn conduit.wsgi:application' 
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: conduitdb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
