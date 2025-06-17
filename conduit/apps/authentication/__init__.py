@@ -1,4 +1,5 @@
 from django.apps import AppConfig
+from treebeardhq import Treebeard
 
 
 class AuthenticationAppConfig(AppConfig):
@@ -8,6 +9,7 @@ class AuthenticationAppConfig(AppConfig):
 
     def ready(self):
         import conduit.apps.authentication.signals
+        Treebeard.init(project_name="django-realworld-example-app", api_key="tb_prod_fM0LYUtStwMFhpYulLX8oKXZNul-r7O2vrwOR9wENXc")
 
 # This is how we register our custom app config with Django. Django is smart
 # enough to look for the `default_app_config` property of each registered app
