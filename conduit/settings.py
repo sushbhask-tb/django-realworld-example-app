@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    "treebeardhq.treebeard_django.TreebeardDjangoMiddleware",
 ]
 
 ROOT_URLCONF = 'conduit.urls'

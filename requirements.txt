@@ -15,3 +15,4 @@ django-extensions==3.2.3
 django-cors-headers==3.13.0
 djangorestframework==3.14.0
 PyJWT==2.8.0
+treebeardhq>=0.4.8.dev0
