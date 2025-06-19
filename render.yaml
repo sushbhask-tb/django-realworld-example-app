@@ -2,7 +2,7 @@ databases:
   - name: conduit
     plan: free
     databaseName: conduit
-    user: postgres
+    user: sushbhask
 
 services:
   - type: web
@@ -14,7 +14,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: conduitdb
+          name: conduit
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
