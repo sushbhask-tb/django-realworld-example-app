@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
     'conduit.apps.articles',
     'conduit.apps.authentication',
-    'conduit.apps.core',
+    'conduit.apps.core.apps.CoreConfig',
     'conduit.apps.profiles',
 ]
 
@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'lumberjack.lumberjack_django.LumberjackDjangoMiddleware',
 ]
 
 ROOT_URLCONF = 'conduit.urls'
