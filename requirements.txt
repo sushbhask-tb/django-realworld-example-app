@@ -16,4 +16,4 @@ django-cors-headers==3.13.0
 djangorestframework==3.14.0
 PyJWT==2.8.0
 psycopg2-binary>=2.9
-lumberjack>=0.4.20
+lumberjack>=0.4.25
